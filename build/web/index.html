@@ -26,6 +26,7 @@ and open the template in the editor.
                 width: 100%;
                 background-color: red;
                 overflow: auto;
+                z-index: 1;
             }
             
             .title{
@@ -33,10 +34,34 @@ and open the template in the editor.
                 float: left;
             }
             
-            .nav{
+            .navFlex{
                 width: 50%;
                 float: right;
                 text-align: center;
+                
+                display: flex;
+                flex-direction: row;
+            }
+            .dropDownFlex{
+                width: 25%;
+                overflow: auto;
+                background-color: black;
+                border: solid white 0.5px;
+
+            }    
+            .dropDownFlex p{
+                color: white;
+                text-align: center;
+            }
+            .dropContent{
+                display: flex;
+                flex-direction: column;
+                
+                background-color: black;
+                position: absolute;
+                z-index: 2;
+                width: 12.5%;
+                visibility: hidden;
             }
             .content{
                 width: 100%;
@@ -86,8 +111,30 @@ and open the template in the editor.
             <div class="title">
                 <h1>://dump</h1>
             </div>
-            <div class="nav">
-                <h2>This is some navbar content</h2>
+            <div class="navFlex">
+                <div class="dropDownFlex" onclick="dropDown('dropContent1')">
+                    <p>Item 1</p>
+                    <div class="dropContent" id="dropContent1">
+                        <div><p>Subitem 1</p></div>
+                        <div><p>Subitem 2</p></div>
+                        <div><p>Subitem 3</p></div>
+                        <div><p>Subitem 4</p></div>
+                    </div>
+                </div>
+                <div class="dropDownFlex">
+                    <p>Item 2</p>
+                </div>
+                <div class="dropDownFlex" onclick="dropDown('dropContent3')">
+                    <p>Item 3</p>
+                    <div class="dropContent" id="dropContent3">
+                        <div><p>Subitem 1</p></div>
+                        <div><p>Subitem 2</p></div>
+                        <div><p>Subitem 3</p></div>
+                    </div>
+                </div>
+                <div class="dropDownFlex">
+                    <p>Item 4</p>
+                </div>
             </div>
         </div>
         <div class="content">
@@ -95,7 +142,8 @@ and open the template in the editor.
             <p class="centerText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
         <div class ="footer">
-            <h2>Matthew Angelucci Copyright 2020</h2>
+            <h2>Matthew Angelucci (footer)</h2>
         </div>;
+        <script type="text/javascript" src="js/dropDown.js"></script>
     </body>
 </html>

@@ -5,3 +5,13 @@
  */
 
 
+function dropDown(elementId){
+    var ele = document.getElementById(elementId);
+    
+    if(ele.style.visibility === "hidden"){
+        ele.style.visibility = "visible";
+    }
+    else{
+        ele.style.visibility = "hidden";
+    }
+}

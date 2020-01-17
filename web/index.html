@@ -61,6 +61,7 @@ and open the template in the editor.
                 position: absolute;
                 z-index: 2;
                 width: 12.5%;
+                visibility: hidden;
             }
             .content{
                 width: 100%;
@@ -111,7 +112,7 @@ and open the template in the editor.
                 <h1>://dump</h1>
             </div>
             <div class="navFlex">
-                <div class="dropDownFlex">
+                <div class="dropDownFlex" onclick="dropDown('dropContent1')">
                     <p>Item 1</p>
                     <div class="dropContent" id="dropContent1">
                         <div><p>Subitem 1</p></div>
@@ -123,7 +124,7 @@ and open the template in the editor.
                 <div class="dropDownFlex">
                     <p>Item 2</p>
                 </div>
-                <div class="dropDownFlex">
+                <div class="dropDownFlex" onclick="dropDown('dropContent3')">
                     <p>Item 3</p>
                     <div class="dropContent" id="dropContent3">
                         <div><p>Subitem 1</p></div>
