@@ -3,13 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function dropInit(dropClassName){
-    var dropList = document.getElementsByClassName(dropClassName);
-    
-    for(var i = 0; i < dropList.length; i++){
-        dropList[i].style.visibility = "hidden";
-    }
-}
+
 
 function dropDown(headerClassName, dropClassName){
     var headList = document.getElementsByClassName(headerClassName);
