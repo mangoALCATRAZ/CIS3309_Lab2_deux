@@ -43,10 +43,17 @@ and open the template in the editor.
             .dropDownFlex{
                 width: 25%;
                 overflow: auto;
-                background-color: black;
-                border: solid white 0.5px;
-
-            }    
+                
+            }   
+            #homeButton{
+                background-image: url("icons/dark/home_icon_H24.png");
+            }
+            #blogButtton{
+                background-image: url("icons/dark/blog_icon_H24.png");
+            }
+            #profileButton{
+                background-image: url("icons/dark/account_dd_icon_H24.png");
+            }
             .dropDownFlex p{
                 color: white;
                 text-align: center;
