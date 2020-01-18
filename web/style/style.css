@@ -12,6 +12,7 @@ and open the template in the editor.
             html{
                 /*done to fix problems with height:100% in page*/
                 height: 100%;
+                width: 100%;
                 margin: 0;
                 padding: 0;
             }
@@ -22,16 +23,17 @@ and open the template in the editor.
                 color: white;
             }
             body{
-                width: 100%;
-                margin: 10px;
-            }
-            
+                background-color: #E6C59D;
+                margin: 0;
+                padding: 0;
+            }         
             
             .header{
                 width: 100%;
-                background-color: red;
+                background-color: #C09867;
                 overflow: auto;
                 z-index: 1;
+                
             }
             
             .title{
@@ -71,8 +73,12 @@ and open the template in the editor.
                 visibility: hidden;
             }
             .content{
-                width: 100%;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
                 overflow: auto;
+                
+                background-color: #FFEAD1;
             }
             .leftContent{
                 width: 50%;
@@ -90,10 +96,10 @@ and open the template in the editor.
             }
             .footer{
                 width: 100%;
-                position: absolute;
+                position: fixed;
                 bottom: 0;
                 text-align: center;
-                background-color: red;
+                background-color: #C09867;
             }
             
             #dumpImg{
