@@ -8,6 +8,8 @@
 function dropDown(headerClassName, dropClassName){
     var headList = document.getElementsByClassName(headerClassName);
     
+    var iconFlag = false; // helps negotiate if icon is clicked
+    
     for(var i = 0; i < headList.length; i++){
         headList[i].onclick = function (){
             var dropContent = this.getElementsByClassName(dropClassName)[0];
@@ -23,6 +25,8 @@ function dropDown(headerClassName, dropClassName){
         else if(elem.style.visibility === "visible"){
             elem.style.visibility = "hidden";
         }
+        
+        iconFlag = true;
     }
     
     function hideExcept(loneElem){
@@ -37,8 +41,9 @@ function dropDown(headerClassName, dropClassName){
     }
     
     window.onclick = function(event){
-        if(!(event.target.className.includes(headerClassName))){
+        if((!event.target.className.includes(headerClassName) && iconFlag === false)){
             hideExcept(null);
         }
+        iconFlag = false;
     };
 }

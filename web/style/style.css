@@ -8,6 +8,13 @@ and open the template in the editor.
     Author     : woah dude
 */
 
+            
+            html{
+                /*done to fix problems with height:100% in page*/
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
             h1{
                 color: white;
             }
@@ -34,6 +41,7 @@ and open the template in the editor.
             
             .navFlex{
                 width: 50%;
+                height: 100%;
                 float: right;
                 text-align: center;
                 
@@ -41,19 +49,13 @@ and open the template in the editor.
                 flex-direction: row;
             }
             .dropDownFlex{
+                
                 width: 25%;
                 overflow: auto;
+                height: 100%;
                 
             }   
-            #homeButton{
-                background-image: url("icons/dark/home_icon_H24.png");
-            }
-            #blogButtton{
-                background-image: url("icons/dark/blog_icon_H24.png");
-            }
-            #profileButton{
-                background-image: url("icons/dark/account_dd_icon_H24.png");
-            }
+            
             .dropDownFlex p{
                 color: white;
                 text-align: center;
