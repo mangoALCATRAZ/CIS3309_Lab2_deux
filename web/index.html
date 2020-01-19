@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style/style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body onresize="windowWidthInitCheck('content')">
+    <body onresize="windowWidthInitCheck('content', 'header')">
         <div class="header">
             <div class="title">
                 <h1>://dump</h1>
@@ -52,7 +52,7 @@ and open the template in the editor.
         <script type="text/javascript" src="js/windowWidthInitCheck.js"></script>
         <script type="text/javascript">
             dropInit("dropContent"); //Initializes drop down menus to "hidden". Done because of errors found in debugging
-            windowWidthInitCheck("content");
+            windowWidthInitCheck("content", "header");
             dropDown("dropDownFlex", "dropContent");
         </script>
     </body>
