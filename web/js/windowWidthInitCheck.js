@@ -1,23 +1,30 @@
 /* 
  * This function initially runs upon loading of the page. It takes in the name 
  * of the content-box and header classes detailed in style.css. It then does a
- * check
+ * check of the screen width in pixels. If the screen width is below what is 
+ * specified, it makes adjustments to elements that are usually stored in
+ * flexboxes in order to make the page look nicer on mobile and small-width
+ * browser windows
  */
 
 
-function windowWidthInitCheck(contentElem, headerElem){
+
+/* global PORTRAIT_WIDTH */
+
+function windowWidthInitCheck(contentElem, headerElem, portraitWidth){
     var w = window.innerWidth;
     var ele = document.getElementsByClassName(contentElem);
     
     
-    if(w <= 730){ // if window width dips below 730 px, often on mobile
+    if(w <= portraitWidth){ // if window width dips below 730 px, often on mobile
         for(i = 0; i < ele.length; i++){
             var thisEleChildren1 = ele[i].children;
             ele[i].style.flexDirection = "column"; //adjusts content elements to fit in column for portrait display, for mobile.
             
             for(j = 0; j < thisEleChildren1.length; j++){
                 if(thisEleChildren1[j].className === "centerText"){
-                    thisEleChildren1[j].style.marginBottom = "1.5%"; // setting content text margin-bottom to 1%, since it is no longer centered to the right of the image
+                    thisEleChildren1[j].style.marginBottom = "4%"; // setting content text margin-bottom to 1%, since it is no longer centered to the right of the image
+                    thisEleChildren1[j].style.marginTop = "2%";
                 }
             }
         }
@@ -30,6 +37,7 @@ function windowWidthInitCheck(contentElem, headerElem){
             for(j = 0; j < thisEleChildren2.length; j++){ // setting content text margin back to auto, to center it in div
                 if(thisEleChildren2[j].className === "centerText"){
                     thisEleChildren2[j].style.marginBottom = "auto";
+                    thisEleChildren2[j].style.marginTop = "auto";
                 }
             }
         }
@@ -37,7 +45,7 @@ function windowWidthInitCheck(contentElem, headerElem){
     
     var headEle = document.getElementsByClassName(headerElem);
     
-    if(w <= 730){ // if narrowed screen resolution below 730 px, usually for mobile
+    if(w <= portraitWidth){ // if narrowed screen resolution below 730 px, usually for mobile
         for(i = 0; i < headEle.length; i++){          
             var thisHeadChildren1 = headEle[i].children; // get children from each header found
             

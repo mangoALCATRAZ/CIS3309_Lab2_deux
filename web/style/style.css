@@ -22,6 +22,9 @@ and open the template in the editor.
             h2{
                 color: white;
             }
+            a{
+                color: gray;
+            }
             body{
                 background-color: #E6C59D;
                 margin: 0;
@@ -66,12 +69,13 @@ and open the template in the editor.
             }   
             
             .dropDownFlex p{
-                color: white;
+                
                 text-align: center;
             }
             .dropContent{
                 display: flex;
                 flex-direction: column;
+                color: white;
                 
                 background-color: black;
                 position: absolute;
@@ -79,18 +83,25 @@ and open the template in the editor.
                 width: 12.5%;
                 visibility: hidden;
             }
+            .dropContent div:hover{
+                background-color: white;
+                color: black;
+            }
+            .outsideContent{
+                margin-bottom: 10%;
+            }
             .content{
                 width: 90%;
                 max-width: 1396px;
                 min-width: 450px;
                 margin-left: auto;
                 margin-right: auto;
+                margin-top: 3%;
                 overflow: auto;
                 
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: center;
                 
                 background-color: #FFEAD1;
                 border-radius: 25px;
@@ -119,6 +130,8 @@ and open the template in the editor.
                 bottom: 0;
                 text-align: center;
                 background-color: #C09867;
+                
+                margin-top: 10%;
             }
             
             .leftImg{
@@ -131,7 +144,6 @@ and open the template in the editor.
                 float: left;
                 max-width: 573px;
                 max-height: 382px;
-                
                 margin-top: 1.5%;
                 margin-left: 1%;
                 margin-bottom: 1.5%;

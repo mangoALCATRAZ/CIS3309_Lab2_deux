@@ -11,23 +11,17 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style/style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body onresize="windowWidthInitCheck('content', 'header')">
+    <body onresize="windowWidthInitCheck('content', 'header', PORTRAIT_WIDTH)">
         <div class="header">
             <div class="title">
                 <h1>://dump</h1>
             </div>
             <div class="navFlex">
-                <div class="dropDownFlex" onclick="dropDown('dropContent1')">
-                    <img src="icons/dark/home_icon_H24.png" alt="home"/>
-                    <div class="dropContent" id="dropContent1">
-                        <div><p>Subitem 1</p></div>
-                        <div><p>Subitem 2</p></div>
-                        <div><p>Subitem 3</p></div>
-                        <div><p>Subitem 4</p></div>
-                    </div>
+                <div class="dropDownFlex">
+                    <a href="index.html"><img src="icons/dark/home_icon_H24.png" alt="home"/></a>
                 </div>
                 <div class="dropDownFlex" >
-                    <img src="icons/dark/blog_icon_H24.png" alt="blog" />
+                    <a href="blog.html"><img src="icons/dark/blog_icon_H24.png" alt="blog" /></a>
                 </div>
                 <div class="dropDownFlex" onclick="dropDown('dropContent3')">
                     <img src="icons/dark/account_dd_icon_H24.png" alt="account" />
@@ -40,19 +34,26 @@ and open the template in the editor.
             </div>
         </div>
         <h1 style="text-align: center;">A dumping ground of user-generated content!</h1>
-        <div class="content">
-            <img class="leftImg" src="pics/dump.jpeg" alt="A dumping ground of user-generated content." />
-            <p class="centerText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <div class="outsideContent">
+            <div class="content">
+                <img class="leftImg" src="pics/dump.jpeg" alt="A dumping ground of user-generated content." />
+                <p class="centerText">://dump is a new sort of media-sharing website that emphasizes content over everything else. It is mean to be a combination of "dumping ground of novel, user-generated content" and "a less toxic, more civil alternative to 4chan, but with less emphasis on discussion". The idea is very much in experimental phases and I will be expanding on the concept further in the semester. 
+                    <br /><br /><a href="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif">Here</a> is an external link, styled differently from the navbar links.
+                </p>
+            </div>
+            
         </div>
         <div class ="footer">
-            <h2>Matthew Angelucci (footer)</h2>
+            <p style="color: white">Matthew Angelucci 2020</p>
         </div>;
         <script type="text/javascript" src="js/dropDown.js"></script>
         <script type="text/javascript" src="js/dropInit.js"></script>
         <script type="text/javascript" src="js/windowWidthInitCheck.js"></script>
         <script type="text/javascript">
+            var PORTRAIT_WIDTH = 730;
+    
             dropInit("dropContent"); //Initializes drop down menus to "hidden". Done because of errors found in debugging
-            windowWidthInitCheck("content", "header");
+            windowWidthInitCheck("content", "header", PORTRAIT_WIDTH);
             dropDown("dropDownFlex", "dropContent");
         </script>
     </body>
