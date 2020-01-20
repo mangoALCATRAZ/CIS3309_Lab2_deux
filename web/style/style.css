@@ -27,6 +27,7 @@ and open the template in the editor.
             }
             p{
                 font-family: Arial, Helvetica, sans-serif;
+                
             }
             body{
                 background-color: #E6C59D;
@@ -91,7 +92,7 @@ and open the template in the editor.
                 color: black;
             }
             .outsideContent{
-                margin-bottom: 10%;
+                margin-bottom: 7%;
             }
             .content{
                 width: 90%;
@@ -138,8 +139,6 @@ and open the template in the editor.
             }
             
             .leftImg{
-                max-width: 100%;
-                max-height: 100%;
                 margin-right: 20px;
                 /*- -former leftContent div attributes below - -
                  - - moved in order to facilitate word wrapping around image - -*/
