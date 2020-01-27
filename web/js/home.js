@@ -3,7 +3,7 @@
  *
  */
 
-function index(viewID){
+function home(viewID){
     var indexContent = `<div class="content">
                 <img class="leftImg" src="pics/dump.jpeg" alt="A dumping ground of user-generated content." />
                 <p class="centerText">://dump is a new sort of media-sharing website that emphasizes content over everything else. It is mean to be a combination of "dumping ground of novel, user-generated content" and "a less toxic, more civil alternative to 4chan, but with less emphasis on discussion". The idea is very much in experimental phases and I will be expanding on the concept further in the semester. 
